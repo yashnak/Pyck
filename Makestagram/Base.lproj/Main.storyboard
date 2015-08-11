@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend Search View Controller-->
+        <scene sceneID="duf-Fg-pMk">
+            <objects>
+                <viewController id="CIu-mW-9E4" customClass="FriendSearchViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w0i-l0-Z9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="P72-U2-MCI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M9P-eS-FIC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPB-h7-0Z6">
+                                <rect key="frame" x="0.0" y="44" width="600" height="44"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CIu-mW-9E4" id="5aP-3u-uqx"/>
+                                </connections>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-I3-ZFg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                    <color key="textColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add Friends" id="CS9-oH-Yjm"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-uu-FRQ">
+                                <rect key="frame" x="0.0" y="88" width="600" height="463"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="kzY-gn-Xbg" customClass="FriendSearchTableViewCell" customModule="Makestagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kzY-gn-Xbg" id="iHK-02-a1A">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwG-yR-tCD">
+                                                    <rect key="frame" x="20" y="14" width="472" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                    <color key="textColor" red="0.99453440589999997" green="0.97443699750000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-u4-TzP">
+                                                    <rect key="frame" x="275" y="6" width="30" height="30"/>
+                                                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    <state key="normal" image="AddFriend">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="FriendAdded"/>
+                                                    <connections>
+                                                        <action selector="followButtonTapped:" destination="kzY-gn-Xbg" eventType="touchUpInside" id="BKP-du-6nb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="followButton" destination="1rg-u4-TzP" id="Kmp-JN-ych"/>
+                                            <outlet property="usernameLabel" destination="uwG-yR-tCD" id="RTx-1v-0HW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CIu-mW-9E4" id="gLK-d1-LJr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6bG-I3-ZFg" firstAttribute="top" secondItem="M9P-eS-FIC" secondAttribute="topMargin" id="M26-0P-wmE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6bG-I3-ZFg" secondAttribute="trailing" constant="-16" id="PYT-vn-VLI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PPB-h7-0Z6" secondAttribute="trailing" constant="-16" id="Wy2-o9-Lal"/>
+                            <constraint firstItem="6bG-I3-ZFg" firstAttribute="leading" secondItem="M9P-eS-FIC" secondAttribute="leadingMargin" constant="-16" id="c7d-7E-nU2"/>
+                            <constraint firstItem="PPB-h7-0Z6" firstAttribute="leading" secondItem="M9P-eS-FIC" secondAttribute="leadingMargin" constant="-16" id="vt2-qP-PSE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="People" id="fNW-So-eBQ">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="searchBar" destination="PPB-h7-0Z6" id="jSL-kb-w6k"/>
+                        <outlet property="tableView" destination="WM7-uu-FRQ" id="UAB-EL-8Eb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md6-eQ-ZGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933" y="343"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="D78-it-JNo">
+            <objects>
+                <viewController id="FCm-8m-WnB" customClass="PhotoViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SdP-66-nvR"/>
+                        <viewControllerLayoutGuide type="bottom" id="jmq-Uy-q8R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A68-Wg-sAK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Camera" id="D5W-gW-fD0">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ry9-gI-xu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71" y="1151"/>
+        </scene>
+        <!--Timeline View Controller-->
+        <scene sceneID="2u5-In-FtJ">
+            <objects>
+                <viewController id="ZOG-s5-zI9" customClass="TimelineViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gai-vw-BcO"/>
+                        <viewControllerLayoutGuide type="bottom" id="4P3-gr-kt1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1pY-Ne-Dn3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="592" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dTh-mC-boK">
+                                <rect key="frame" x="0.0" y="0.0" width="605" height="626"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="592" id="4FK-Jm-bHD" customClass="PostTableViewCell" customModule="Makestagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4FK-Jm-bHD" id="qhc-Zo-R6T">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZm-o4-ABY">
+                                                    <rect key="frame" x="8" y="0.0" width="357" height="571"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9q-3Y-T8u">
+                                                            <rect key="frame" x="328" y="525" width="21" height="24"/>
+                                                            <state key="normal" image="Flag">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="moreButtonTapped:" destination="4FK-Jm-bHD" eventType="touchUpInside" id="GXv-NS-wR9"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1U-PC-Rwn">
+                                                            <rect key="frame" x="8" y="525" width="70" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eo-xA-KIK">
+                                                            <rect key="frame" x="242" y="525" width="30" height="30"/>
+                                                            <state key="normal" title="Add">
+                                                                <color key="titleColor" red="0.99453440589999997" green="0.97443699750000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="addButtonTapped:" destination="4FK-Jm-bHD" eventType="touchUpInside" id="6LD-XC-nSN"/>
+                                                            </connections>
+                                                        </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-7g-xe8">
+                                                            <rect key="frame" x="0.0" y="2" width="390" height="508"/>
+                                                        </imageView>
+                                                        <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sEY-fS-h6v">
+                                                            <rect key="frame" x="0.0" y="473" width="402" height="37"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0O-q7-c9z">
+                                                                    <rect key="frame" x="8" y="10" width="91" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="16"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="x1U-PC-Rwn" id="uDw-lF-aiw"/>
+                                            <outlet property="mainView" destination="SZm-o4-ABY" id="Yl1-re-qsG"/>
+                                            <outlet property="moreButton" destination="W9q-3Y-T8u" id="cuj-eA-OhY"/>
+                                            <outlet property="postImageView" destination="Sla-7g-xe8" id="huQ-d0-i7f"/>
+                                            <outlet property="usernameLabel" destination="z0O-q7-c9z" id="K8q-Fs-mnp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZOG-s5-zI9" id="F1I-1e-1Z3"/>
+                                    <outlet property="delegate" destination="ZOG-s5-zI9" id="RCc-g3-Bhb"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIv-c1-Ywe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" red="0.0017437346259999999" green="0.01025883838" blue="0.0068291490400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="29"/>
+                                    <color key="textColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Pyck" id="kny-E7-L0R">
+                                        <barButtonItem key="backBarButtonItem" title="back" id="8wB-ey-rFF"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NIv-c1-Ywe" firstAttribute="top" secondItem="1pY-Ne-Dn3" secondAttribute="topMargin" id="7cK-Qy-8dy"/>
+                            <constraint firstItem="NIv-c1-Ywe" firstAttribute="leading" secondItem="1pY-Ne-Dn3" secondAttribute="leadingMargin" constant="-16" id="8gm-gt-Wnd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NIv-c1-Ywe" secondAttribute="trailing" constant="-16" id="wsT-NB-TXT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" systemItem="mostRecent" id="Qsw-7y-3cQ">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="dTh-mC-boK" id="f27-rM-KDy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F23-aQ-QRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="-516"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="AUY-16-B35">
+            <objects>
+                <viewController storyboardIdentifier="photoTakingViewController" id="NiU-UG-wnh" customClass="PhotoTakingViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gUq-TY-hRq"/>
+                        <viewControllerLayoutGuide type="bottom" id="IXe-Db-LCA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uPf-NC-hoU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYe-QR-to4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="56"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Edit" id="MmK-jv-m7y">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="JX0-f8-zpt">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7yA-uQ-yvV">
+                                                <rect key="frame" x="462" y="50" width="88" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.99453440589999997" green="0.97443699750000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancel:" destination="NiU-UG-wnh" eventType="touchUpInside" id="bfB-nk-pLk"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Wft-mb-2W4">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CqL-ju-buW">
+                                                <rect key="frame" x="321" y="45" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                <state key="normal" title="Post!">
+                                                    <color key="titleColor" red="0.99453440589999997" green="0.97443699750000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveImage" destination="NiU-UG-wnh" eventType="touchUpInside" id="2zm-Xh-zJx"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Edit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OID-0K-4fb">
+                                <rect key="frame" x="266" y="28" width="48" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-Xk-HQb">
+                                <rect key="frame" x="0.0" y="494" width="600" height="106"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Insert Caption" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOS-SD-AQd">
+                                        <rect key="frame" x="75" y="62" width="451" height="30"/>
+                                        <color key="textColor" red="0.2274509804" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Po-q1-3ZR">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsg-qc-ft5">
+                                                <rect key="frame" x="8" y="-2" width="47" height="47"/>
+                                                <state key="normal" image="Red">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="Fna-da-fBl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we4-xG-a3I">
+                                                <rect key="frame" x="181" y="-2" width="47" height="47"/>
+                                                <state key="normal" title="Light Green" image="LightGreen">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="vhM-QJ-z7V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSo-9E-G2F">
+                                                <rect key="frame" x="236" y="0.0" width="47" height="47"/>
+                                                <state key="normal" title="Dark Green" image="DarkGreen">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="MDn-eD-fzQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZR-jX-h1O">
+                                                <rect key="frame" x="300" y="-2" width="47" height="47"/>
+                                                <state key="normal" title="Light Blue" image="LightBlue">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="P97-pw-xYa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-Cw-TWQ">
+                                                <rect key="frame" x="424" y="0.0" width="47" height="47"/>
+                                                <state key="normal" title="Grey" image="Grey">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="jIJ-iX-hf5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwD-nT-TOb">
+                                                <rect key="frame" x="479" y="0.0" width="47" height="47"/>
+                                                <state key="normal" title="Black" image="Black">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="nF2-0u-QZM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qp-Wq-mqk">
+                                                <rect key="frame" x="545" y="-1" width="47" height="47"/>
+                                                <state key="normal" title="Brown" image="Brown">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="Ghi-b9-VcH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-Hh-RqC">
+                                                <rect key="frame" x="63" y="0.0" width="47" height="47"/>
+                                                <state key="normal" title="Dark Orange" image="DarkOrange">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="Qv9-pU-Ryv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U5-ad-nvd">
+                                                <rect key="frame" x="126" y="-1" width="47" height="47"/>
+                                                <state key="normal" title="Yellow" image="Yellow">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="x5l-ZT-vqp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoP-N6-agO">
+                                                <rect key="frame" x="355" y="-1" width="47" height="47"/>
+                                                <state key="normal" title="Blue" image="Blue">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pencilPressed:" destination="NiU-UG-wnh" eventType="touchUpInside" id="jUe-nZ-kzy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99775094696969702" green="0.99775094696969702" blue="0.99775094696969702" alpha="0.20999999999999999" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="iOS-SD-AQd" secondAttribute="centerX" constant="-0.5" id="Aqi-yj-Ou5"/>
+                                    <constraint firstItem="iOS-SD-AQd" firstAttribute="leading" secondItem="MpS-Xk-HQb" secondAttribute="leading" constant="75" id="Azm-m7-Lir"/>
+                                    <constraint firstAttribute="centerY" secondItem="iOS-SD-AQd" secondAttribute="centerY" id="JW4-PA-lsx"/>
+                                    <constraint firstAttribute="trailing" secondItem="iOS-SD-AQd" secondAttribute="trailing" constant="74" id="UvE-r9-N9d"/>
+                                    <constraint firstAttribute="height" constant="106" id="X9a-qn-plc"/>
+                                    <constraint firstAttribute="bottom" secondItem="iOS-SD-AQd" secondAttribute="bottom" constant="14" id="okn-Uk-Uch"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOT-e9-RMC" userLabel="myImageView">
+                                <rect key="frame" x="0.0" y="64" width="603" height="432"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="603" id="BrT-V7-qmS"/>
+                                    <constraint firstAttribute="height" constant="309" id="hPa-t6-yCP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BrT-V7-qmS"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOT-e9-RMC" firstAttribute="leading" secondItem="uPf-NC-hoU" secondAttribute="leadingMargin" id="10l-1w-MNu"/>
+                            <constraint firstItem="MpS-Xk-HQb" firstAttribute="leading" secondItem="uPf-NC-hoU" secondAttribute="leadingMargin" constant="-16" id="2Xr-f1-Smr"/>
+                            <constraint firstItem="IXe-Db-LCA" firstAttribute="top" secondItem="MpS-Xk-HQb" secondAttribute="bottom" id="33w-HV-uDI"/>
+                            <constraint firstItem="MpS-Xk-HQb" firstAttribute="top" secondItem="bOT-e9-RMC" secondAttribute="bottom" constant="-2" id="46G-hr-5Sy"/>
+                            <constraint firstItem="bOT-e9-RMC" firstAttribute="top" secondItem="dYe-QR-to4" secondAttribute="bottom" id="A5j-3Q-0Wq"/>
+                            <constraint firstItem="MpS-Xk-HQb" firstAttribute="top" secondItem="dYe-QR-to4" secondAttribute="bottom" constant="418" id="EGe-mr-x8V"/>
+                            <constraint firstItem="bOT-e9-RMC" firstAttribute="top" secondItem="uPf-NC-hoU" secondAttribute="top" constant="76" id="MeF-Yz-PAC"/>
+                            <constraint firstItem="dYe-QR-to4" firstAttribute="leading" secondItem="uPf-NC-hoU" secondAttribute="leadingMargin" constant="-16" id="NVc-Zt-1eO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bOT-e9-RMC" secondAttribute="trailing" constant="-19" id="OzB-Ik-T3X"/>
+                            <constraint firstAttribute="centerY" secondItem="MpS-Xk-HQb" secondAttribute="centerY" id="Sm0-S2-cKf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MpS-Xk-HQb" secondAttribute="trailing" constant="-16" id="ewO-aZ-q7D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dYe-QR-to4" secondAttribute="trailing" constant="-16" id="jsb-Dg-c5O"/>
+                            <constraint firstItem="dYe-QR-to4" firstAttribute="top" secondItem="gUq-TY-hRq" secondAttribute="bottom" id="ku5-Lz-qUb"/>
+                            <constraint firstAttribute="centerX" secondItem="OID-0K-4fb" secondAttribute="centerX" id="mkG-Gx-I3p"/>
+                            <constraint firstItem="bOT-e9-RMC" firstAttribute="leading" secondItem="uPf-NC-hoU" secondAttribute="leading" id="r1I-de-eR3"/>
+                            <constraint firstItem="OID-0K-4fb" firstAttribute="top" secondItem="dYe-QR-to4" secondAttribute="bottom" constant="-36" id="uf1-0p-c47"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bOT-e9-RMC" secondAttribute="trailing" id="woZ-gb-Diu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="10l-1w-MNu"/>
+                                <exclude reference="woZ-gb-Diu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" id="nXf-fb-8uA"/>
+                    <connections>
+                        <outlet property="captionTextField" destination="iOS-SD-AQd" id="OEY-0m-IBd"/>
+                        <outlet property="myImageView" destination="bOT-e9-RMC" id="l0s-aG-Iz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wv2-ze-5MO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="-527"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XTg-PY-wCZ">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="3zT-YB-myx" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" backgroundImage="TabBar" id="yiv-SI-iC5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0017437346255519471" green="0.010258838383838342" blue="0.0068291490404863101" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZOG-s5-zI9" kind="relationship" relationship="viewControllers" id="eLh-IO-ggp"/>
+                        <segue destination="FCm-8m-WnB" kind="relationship" relationship="viewControllers" id="Ip3-5p-c0b"/>
+                        <segue destination="CIu-mW-9E4" kind="relationship" relationship="viewControllers" id="zWC-SV-4h6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ya4-tU-uKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-306" y="172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddFriend" width="581" height="581"/>
+        <image name="Black" width="200" height="200"/>
+        <image name="Blue" width="200" height="200"/>
+        <image name="Brown" width="200" height="200"/>
+        <image name="Camera" width="40" height="30"/>
+        <image name="DarkGreen" width="200" height="200"/>
+        <image name="DarkOrange" width="200" height="200"/>
+        <image name="Flag" width="408" height="598"/>
+        <image name="FriendAdded" width="576" height="597"/>
+        <image name="Grey" width="200" height="200"/>
+        <image name="LightBlue" width="200" height="200"/>
+        <image name="LightGreen" width="200" height="200"/>
+        <image name="People" width="42" height="42"/>
+        <image name="Red" width="200" height="200"/>
+        <image name="TabBar" width="321" height="49"/>
+        <image name="Yellow" width="200" height="200"/>
+    </resources>
+</document>
