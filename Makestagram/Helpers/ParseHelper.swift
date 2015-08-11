@@ -24,6 +24,7 @@ class ParseHelper {
   // Post Relation
   static let ParsePostUser          = "user"
   static let ParsePostCreatedAt     = "createdAt"
+  static let ParsePostCaption = "caption"
   
   // Flagged Content Relation
   static let ParseFlaggedContentClass    = "FlaggedContent"

@@ -58,6 +58,7 @@ class PostTableViewCell: UITableViewCell {
         captionLabel.text = toPass
         mainView.layer.cornerRadius = 10;
         mainView.layer.masksToBounds = true;
+        captionLabel.text = post.caption
         // bind the image of the post to the 'postImage' view
         post.image ->> postImageView
         

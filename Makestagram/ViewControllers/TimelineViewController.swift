@@ -30,6 +30,7 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     super.viewDidAppear(animated)
   
     timelineComponent.loadInitialIfRequired()
+    self.timelineComponent.refresh(self)
   }
   
   // MARK: TimelineComponentTarget implementation
@@ -55,6 +56,8 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
         let post = Post()
         post.image.value = image!
         post.uploadPost()
+        //This code doesn't actually get used...
+        //Don't modify it thinking it'll change things
     }
   }
     

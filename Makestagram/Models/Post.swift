@@ -15,7 +15,9 @@ class Post : PFObject, PFSubclassing {
   
   @NSManaged var imageFile: PFFile?
   @NSManaged var user: PFUser?
-
+  @NSManaged var caption: String?
+    
+ 
   var image: Dynamic<UIImage?> = Dynamic(nil)
   var likes =  Dynamic<[PFUser]?>(nil)
   var photoUploadTask: UIBackgroundTaskIdentifier?

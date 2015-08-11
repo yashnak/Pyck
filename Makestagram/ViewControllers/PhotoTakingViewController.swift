@@ -81,8 +81,24 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
     }
 
     @IBAction func saveImage() {
-//        photoTakingHelper?.successCallback(myImageView.image)
-        self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
+        if let helper = photoTakingHelper {
+//            helper.successCallback(myImageView.image)
+            //Uploads the image (by calling success
+            helper.viewController.dismissViewControllerAnimated(true, completion: nil)
+            //Dismisses the view controllers
+        } else {
+            self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
+            //Dismisses the view controller
+            
+            //Upload the image
+
+            
+        }
+        
+        let post = Post()
+        post.image.value = myImageView.image
+        post.caption = captionTextField.text
+        post.uploadPost()
     }
     
     override func viewDidLoad() {
