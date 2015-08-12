@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let acl = PFACL()
     acl.setPublicReadAccess(true)
     PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
-    
+    UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.None)
     // Initialize facebook
     PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
     

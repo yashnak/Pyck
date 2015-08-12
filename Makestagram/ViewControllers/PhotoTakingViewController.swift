@@ -19,7 +19,9 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
     var thePost: Post?
 
     //drawing
+    @IBOutlet weak var finalView: UIView!
     
+    @IBOutlet weak var drawView: UIImageView!
     @IBAction func eraserPressed(sender: UIButton) {
     
     }
@@ -96,7 +98,7 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
         }
         
         let post = Post()
-        post.image.value = myImageView.image
+        post.image.value = drawView.image
         post.caption = captionTextField.text
         post.uploadPost()
     }
@@ -105,8 +107,8 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
         super.viewDidLoad()
         picker.delegate = self
         self.myImageView.image = self.thePost!.image.value
-
-
+        self.drawView.image = self.thePost!.image.value
+//        self.drawView.image = pb_takeSnapshot(drawView)
         // Do any additional setup after loading the view.
     }
     
@@ -148,16 +150,16 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         swiped = false
         if let touch = touches.first as? UITouch {
-            lastPoint = touch.locationInView(self.view)
+            lastPoint = touch.locationInView(self.drawView)
         }
     }
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
         // 1
-        UIGraphicsBeginImageContext(view.frame.size)
+        UIGraphicsBeginImageContext(drawView.frame.size)
         let context = UIGraphicsGetCurrentContext()
-       myImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        drawView.image?.drawInRect(CGRect(x: 0, y: 0, width: drawView.frame.size.width, height: drawView.frame.size.height))
         
         // 2
         CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
@@ -173,17 +175,27 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
         CGContextStrokePath(context)
         
         // 5
-        myImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        myImageView.alpha = opacity
+        drawView.image = UIGraphicsGetImageFromCurrentImageContext()
+//        myImageView.alpha = opacity
         UIGraphicsEndImageContext()
         
     }
-    
+    func pb_takeSnapshot(snapshotView: UIView) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(snapshotView.bounds.size, false, UIScreen.mainScreen().scale)
+        
+        snapshotView.drawViewHierarchyInRect(finalView.bounds, afterScreenUpdates: true)
+        
+        // old style: layer.renderInContext(UIGraphicsGetCurrentContext())
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
     override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
         // 6
         swiped = true
         if let touch = touches.first as? UITouch {
-            let currentPoint = touch.locationInView(view)
+            let currentPoint = touch.locationInView(drawView)
             drawLineFrom(lastPoint, toPoint: currentPoint)
             
             // 7

@@ -94,8 +94,12 @@ extension PhotoTakingHelper: FilterViewControllerDelegate {
     self.filteredImage = selectedImage
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let photoTakingViewController = storyboard.instantiateViewControllerWithIdentifier("photoTakingViewController") as! PhotoTakingViewController
-    photoTakingViewController.loadView()
-    photoTakingViewController.myImageView.image = filteredImage
+//    photoTakingViewController.loadView()
+//    photoTakingViewController.view.layoutIfNeeded()
+//    photoTakingViewController.myImageView.image = filteredImage
+    let thePost = Post()
+    thePost.image.value = filteredImage
+    photoTakingViewController.thePost = thePost
     photoTakingViewController.photoTakingHelper = self
     pushModalViewController(photoTakingViewController)
     
