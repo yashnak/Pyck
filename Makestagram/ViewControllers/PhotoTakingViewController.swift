@@ -83,8 +83,14 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
     }
 
     @IBAction func saveImage() {
+        
+        let post = Post()
+        post.image.value = pb_takeSnapshot(finalView)
+        post.caption = captionTextField.text
+        post.uploadPost()
+        
         if let helper = photoTakingHelper {
-//            helper.successCallback(myImageView.image)
+            //            helper.successCallback(myImageView.image)
             //Uploads the image (by calling success
             helper.viewController.dismissViewControllerAnimated(true, completion: nil)
             //Dismisses the view controllers
@@ -93,21 +99,20 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
             //Dismisses the view controller
             
             //Upload the image
-
+            
             
         }
         
-        let post = Post()
-        post.image.value = drawView.image
-        post.caption = captionTextField.text
-        post.uploadPost()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
         self.myImageView.image = self.thePost!.image.value
-        self.drawView.image = self.thePost!.image.value
+        finalView.backgroundColor = UIColor.blackColor()
+        drawView.backgroundColor = UIColor.clearColor()
+        myImageView.backgroundColor = UIColor.blackColor()
+//        self.drawView.image = self.thePost!.image.value
 //        self.drawView.image = pb_takeSnapshot(drawView)
         // Do any additional setup after loading the view.
     }
@@ -183,7 +188,7 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
     func pb_takeSnapshot(snapshotView: UIView) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(snapshotView.bounds.size, false, UIScreen.mainScreen().scale)
         
-        snapshotView.drawViewHierarchyInRect(finalView.bounds, afterScreenUpdates: true)
+        snapshotView.drawViewHierarchyInRect(snapshotView.bounds, afterScreenUpdates: true)
         
         // old style: layer.renderInContext(UIGraphicsGetCurrentContext())
         
