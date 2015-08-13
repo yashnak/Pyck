@@ -10,7 +10,6 @@
 		18D6049B1B76BA9D0050D653 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */; };
 		18D6049D1B76BABA0050D653 /* FriedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6049C1B76BABA0050D653 /* FriedListTableViewCell.swift */; };
 		18EAC36A1B700C9100D15954 /* TipInCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAC3691B700C9100D15954 /* TipInCellAnimator.swift */; };
-		50D438D38A68B7EDF7EAA9D5 /* libPods-Makestagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4314E0E8618C071152EB10EE /* libPods-Makestagram.a */; };
 		621BBB791B0E5D1F00E1F1DB /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBB781B0E5D1F00E1F1DB /* TimelineViewController.swift */; };
 		621BBB7B1B0E5D3A00E1F1DB /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBB7A1B0E5D3A00E1F1DB /* PhotoViewController.swift */; };
 		621BBB7D1B0E5D4500E1F1DB /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBB7C1B0E5D4500E1F1DB /* FriendSearchViewController.swift */; };
@@ -161,7 +160,6 @@
 		18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		18D6049C1B76BABA0050D653 /* FriedListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedListTableViewCell.swift; sourceTree = "<group>"; };
 		18EAC3691B700C9100D15954 /* TipInCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInCellAnimator.swift; sourceTree = "<group>"; };
-		4314E0E8618C071152EB10EE /* libPods-Makestagram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Makestagram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		621BBB781B0E5D1F00E1F1DB /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		621BBB7A1B0E5D3A00E1F1DB /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		621BBB7C1B0E5D4500E1F1DB /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -214,8 +212,6 @@
 		922B16C61B7AA4A000295B47 /* PhotoTakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingViewController.swift; sourceTree = "<group>"; };
 		926DD42F1B7AB82A00E92118 /* ObjcHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcHelper.h; sourceTree = "<group>"; };
 		926DD4301B7AB82A00E92118 /* ObjcHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcHelper.m; sourceTree = "<group>"; };
-		9AD4AE26704B6CFC32737C4D /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
-		D0CA7442456502EDD0ADDD14 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,7 +238,6 @@
 				62A07CFE1B1E2465001F6916 /* ConvenienceKit.framework in Frameworks */,
 				62551B6E1B06BF6D000913E4 /* FBSDKLoginKit.framework in Frameworks */,
 				62551B701B06BF6D000913E4 /* Parse.framework in Frameworks */,
-				50D438D38A68B7EDF7EAA9D5 /* libPods-Makestagram.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +251,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0950C093DA2A48CFD5236E19 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9AD4AE26704B6CFC32737C4D /* Pods-Makestagram.debug.xcconfig */,
-				D0CA7442456502EDD0ADDD14 /* Pods-Makestagram.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		621BBB7F1B0E7E0B00E1F1DB /* PhotoTaking */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +281,6 @@
 				62551B691B06BF6D000913E4 /* ParseFacebookUtils.framework */,
 				62551B6A1B06BF6D000913E4 /* ParseFacebookUtilsV4.framework */,
 				62551B6B1B06BF6D000913E4 /* ParseUI.framework */,
-				4314E0E8618C071152EB10EE /* libPods-Makestagram.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -388,7 +373,6 @@
 				62C8C1E21B06BD6500DC3EA7 /* Makestagram */,
 				62C8C1F81B06BD6500DC3EA7 /* MakestagramTests */,
 				62C8C1E11B06BD6500DC3EA7 /* Products */,
-				0950C093DA2A48CFD5236E19 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -477,12 +461,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62C8C1FF1B06BD6500DC3EA7 /* Build configuration list for PBXNativeTarget "Makestagram" */;
 			buildPhases = (
-				72A10108753C4C9964337724 /* Check Pods Manifest.lock */,
 				62C8C1DC1B06BD6500DC3EA7 /* Sources */,
 				62C8C1DD1B06BD6500DC3EA7 /* Frameworks */,
 				62C8C1DE1B06BD6500DC3EA7 /* Resources */,
 				62A07CFD1B1E2445001F6916 /* Embed Frameworks */,
-				B5C7CFF9C504F3BCA357016F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -646,39 +628,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		72A10108753C4C9964337724 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B5C7CFF9C504F3BCA357016F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		62C8C1DC1B06BD6500DC3EA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -841,7 +790,6 @@
 		};
 		62C8C2001B06BD6500DC3EA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AD4AE26704B6CFC32737C4D /* Pods-Makestagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -867,7 +815,6 @@
 		};
 		62C8C2011B06BD6500DC3EA7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0CA7442456502EDD0ADDD14 /* Pods-Makestagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
