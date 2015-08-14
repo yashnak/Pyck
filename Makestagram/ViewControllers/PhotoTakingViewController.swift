@@ -9,10 +9,11 @@
 import UIKit
 import Parse
 
-class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet var captionTextField: UITextField!
     @IBOutlet weak var myImageView: UIImageView!
+    
     let picker = UIImagePickerController()
     var photoTakingHelper : PhotoTakingHelper?
 //    var thePhotoToEdit: UIImage?
@@ -112,10 +113,27 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
         finalView.backgroundColor = UIColor.blackColor()
         drawView.backgroundColor = UIColor.clearColor()
         myImageView.backgroundColor = UIColor.blackColor()
+        //captionTextField.returnKeyType = .Done
+        self.captionTextField.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+    
+
 //        self.drawView.image = self.thePost!.image.value
 //        self.drawView.image = pb_takeSnapshot(drawView)
         // Do any additional setup after loading the view.
     }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 350
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 350
+    }
+    
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
@@ -185,6 +203,12 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
         UIGraphicsEndImageContext()
         
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     func pb_takeSnapshot(snapshotView: UIView) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(snapshotView.bounds.size, false, UIScreen.mainScreen().scale)
         

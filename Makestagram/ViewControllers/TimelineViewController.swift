@@ -23,6 +23,9 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     timelineComponent = TimelineComponent(target: self)
     self.tabBarController?.delegate = self
     
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 500
+    
    tableView.backgroundColor = UIColor.blackColor()
   }
   
@@ -198,10 +201,6 @@ extension TimelineViewController: UITableViewDelegate {
 //    
 //    return headerCell
 //  }
-  
-  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 40
-  }
   
 }
 

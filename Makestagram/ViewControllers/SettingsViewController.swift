@@ -10,13 +10,12 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-//    @IBAction func cancelButtonPressed(sender: AnyObject) {
-//        self.dismissViewControllerAnimated(true, completion: {});
-//    }
+    @IBAction func cancelButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {});
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dismissViewControllerAnimated(true, completion: {});
 
         // Do any additional setup after loading the view.
     }
