@@ -327,9 +327,9 @@
 		627718811B0A581600AF5C6E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				922B16C61B7AA4A000295B47 /* PhotoTakingViewController.swift */,
 				627718821B0A581600AF5C6E /* FilterViewController */,
 				621BBB781B0E5D1F00E1F1DB /* TimelineViewController.swift */,
+				922B16C61B7AA4A000295B47 /* PhotoTakingViewController.swift */,
 				621BBB7A1B0E5D3A00E1F1DB /* PhotoViewController.swift */,
 				621BBB7C1B0E5D4500E1F1DB /* FriendSearchViewController.swift */,
 				18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */,

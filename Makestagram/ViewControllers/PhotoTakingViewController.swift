@@ -42,9 +42,13 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
     }
     
     @IBAction func cancel(sender: AnyObject) {
-        if((self.presentingViewController) != nil){
-            self.presentingViewController!.dismissViewControllerAnimated(false, completion: nil)
-            println("cancel")
+        if let photoTakingHelper = photoTakingHelper {
+            photoTakingHelper.popModalViewController()
+        } else {
+            if((self.presentingViewController) != nil){
+                self.presentingViewController!.dismissViewControllerAnimated(false, completion: nil)
+                println("cancel")
+            }
         }
     }
 
@@ -58,29 +62,29 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
     
     //camera
     func noCamera(){
-        let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
-        alertVC.addAction(okAction)
-        presentViewController(alertVC, animated: true, completion: nil)
+//        let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
+//        let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
+//        alertVC.addAction(okAction)
+//        presentViewController(alertVC, animated: true, completion: nil)
     }
     @IBAction func photoFromLibrary(sender: UIBarButtonItem) {
-        picker.allowsEditing = false //2
-        picker.sourceType = .PhotoLibrary //3
-        picker.modalPresentationStyle = .Popover
-        presentViewController(picker, animated: true, completion: nil)//4
-        picker.popoverPresentationController?.barButtonItem = sender
+//        picker.allowsEditing = false //2
+//        picker.sourceType = .PhotoLibrary //3
+//        picker.modalPresentationStyle = .Popover
+//        presentViewController(picker, animated: true, completion: nil)//4
+//        picker.popoverPresentationController?.barButtonItem = sender
     
     }
     
     @IBAction func shootPhoto(sender: UIBarButtonItem) {
-        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-            picker.allowsEditing = false
-            picker.sourceType = UIImagePickerControllerSourceType.Camera
-            picker.cameraCaptureMode = .Photo
-            presentViewController(picker, animated: true, completion: nil)
-        } else {
-            noCamera()
-        }
+//        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+//            picker.allowsEditing = false
+//            picker.sourceType = UIImagePickerControllerSourceType.Camera
+//            picker.cameraCaptureMode = .Photo
+//            presentViewController(picker, animated: true, completion: nil)
+//        } else {
+//            noCamera()
+//        }
     }
 
     @IBAction func saveImage() {
@@ -91,9 +95,10 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
         post.uploadPost()
         
         if let helper = photoTakingHelper {
-            //            helper.successCallback(myImageView.image)
+                       helper.successCallback(myImageView.image)
             //Uploads the image (by calling success
             helper.viewController.dismissViewControllerAnimated(true, completion: nil)
+            //helper.popModalViewController()
             //Dismisses the view controllers
         } else {
             self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)

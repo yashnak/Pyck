@@ -23,8 +23,8 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     timelineComponent = TimelineComponent(target: self)
     self.tabBarController?.delegate = self
     
-    tableView.rowHeight = UITableViewAutomaticDimension
-    tableView.estimatedRowHeight = 500
+//    tableView.rowHeight = UITableViewAutomaticDimension
+//    tableView.estimatedRowHeight = 500
     
    tableView.backgroundColor = UIColor.blackColor()
   }
