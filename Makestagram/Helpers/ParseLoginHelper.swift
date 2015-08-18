@@ -1,10 +1,4 @@
-//
-//  ParseLoginHelper.swift
-//  Makestagram
-//
-//  Created by Benjamin Encz on 4/15/15.
-//  Copyright (c) 2015 Make School. All rights reserved.
-//
+
 
 import Foundation
 import FBSDKCoreKit
@@ -81,6 +75,14 @@ extension ParseLoginHelper : PFSignUpViewControllerDelegate {
   
   func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
     self.callback(user, nil)
+    
+    var signUpLogoTitle = UILabel()
+    signUpLogoTitle.text = "Pyck"
+    signUpLogoTitle.textColor = UIColor.whiteColor()
+    signUpLogoTitle.font = UIFont(name: "Avenir", size: 50)
+    signUpController.signUpView?.logo = signUpLogoTitle
+    
+    
   }
   
 }

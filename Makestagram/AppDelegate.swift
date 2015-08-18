@@ -64,6 +64,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       loginViewController.signUpController?.delegate = parseLoginHelper
       
       startViewController = loginViewController
+        
+        loginViewController.view.backgroundColor = UIColor.blackColor()
+////        
+//        let logoView = UIImageView(image: UIImage(named:"pyckLogo.png"))
+//        loginViewController.logInView!.logo = logoView
+
+        var logoInLogoTitle = UILabel()
+        logoInLogoTitle.text = "Pyck"
+        logoInLogoTitle.textColor = UIColor.whiteColor()
+        logoInLogoTitle.font = UIFont(name: "Avenir", size: 50)
+        loginViewController.logInView?.logo = logoInLogoTitle
+        
+//        var signUpLogoTitle = UILabel()
+//        signUpLogoTitle.text = "Pyck"
+//        signUpLogoTitle.textColor = UIColor.whiteColor()
+//        signUpLogoTitle.font = UIFont(name: "Avenir", size: 50)
+//        signUpViewController.signUpView?.logo = signUpLogoTitle
+//        
+        
     }
     
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)

@@ -11,6 +11,8 @@
 		18D6049B1B76BA9D0050D653 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */; };
 		18D6049D1B76BABA0050D653 /* FriedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6049C1B76BABA0050D653 /* FriedListTableViewCell.swift */; };
 		18EAC36A1B700C9100D15954 /* TipInCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAC3691B700C9100D15954 /* TipInCellAnimator.swift */; };
+		18EC5D341B829BAF00C07362 /* ParseLoginUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC5D331B829BAF00C07362 /* ParseLoginUI.swift */; };
+		18EC5D3C1B829F6600C07362 /* ParseSignUpUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC5D3B1B829F6600C07362 /* ParseSignUpUI.swift */; };
 		621BBB791B0E5D1F00E1F1DB /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBB781B0E5D1F00E1F1DB /* TimelineViewController.swift */; };
 		621BBB7B1B0E5D3A00E1F1DB /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBB7A1B0E5D3A00E1F1DB /* PhotoViewController.swift */; };
 		621BBB7D1B0E5D4500E1F1DB /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621BBB7C1B0E5D4500E1F1DB /* FriendSearchViewController.swift */; };
@@ -164,6 +166,8 @@
 		18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		18D6049C1B76BABA0050D653 /* FriedListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedListTableViewCell.swift; sourceTree = "<group>"; };
 		18EAC3691B700C9100D15954 /* TipInCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInCellAnimator.swift; sourceTree = "<group>"; };
+		18EC5D331B829BAF00C07362 /* ParseLoginUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginUI.swift; sourceTree = "<group>"; };
+		18EC5D3B1B829F6600C07362 /* ParseSignUpUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSignUpUI.swift; sourceTree = "<group>"; };
 		621BBB781B0E5D1F00E1F1DB /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		621BBB7A1B0E5D3A00E1F1DB /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		621BBB7C1B0E5D4500E1F1DB /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -371,6 +375,8 @@
 				18EAC3691B700C9100D15954 /* TipInCellAnimator.swift */,
 				926DD42F1B7AB82A00E92118 /* ObjcHelper.h */,
 				926DD4301B7AB82A00E92118 /* ObjcHelper.m */,
+				18EC5D331B829BAF00C07362 /* ParseLoginUI.swift */,
+				18EC5D3B1B829F6600C07362 /* ParseSignUpUI.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -687,6 +693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EC5D341B829BAF00C07362 /* ParseLoginUI.swift in Sources */,
 				627718901B0A581600AF5C6E /* Filter.swift in Sources */,
 				18D6049B1B76BA9D0050D653 /* FriendListViewController.swift in Sources */,
 				18EAC36A1B700C9100D15954 /* TipInCellAnimator.swift in Sources */,
@@ -699,6 +706,7 @@
 				6277189F1B0A58E800AF5C6E /* ErrorHandling.swift in Sources */,
 				621BBB791B0E5D1F00E1F1DB /* TimelineViewController.swift in Sources */,
 				621BBB811B0E7FA000E1F1DB /* PhotoTakingHelper.swift in Sources */,
+				18EC5D3C1B829F6600C07362 /* ParseSignUpUI.swift in Sources */,
 				621BBB7B1B0E5D3A00E1F1DB /* PhotoViewController.swift in Sources */,
 				180667E11B7D440B00D103E8 /* SettingsViewController.swift in Sources */,
 				62A07CF71B1E03AA001F6916 /* FriendSearchTableViewCell.swift in Sources */,
