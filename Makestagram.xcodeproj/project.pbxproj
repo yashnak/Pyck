@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180667E11B7D440B00D103E8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180667E01B7D440B00D103E8 /* SettingsViewController.swift */; };
+		180667E11B7D440B00D103E8 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180667E01B7D440B00D103E8 /* AboutViewController.swift */; };
+		18822D1B1B8303D8008D2D7E /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18822D1A1B8303D8008D2D7E /* LogoutViewController.swift */; };
 		18D6049B1B76BA9D0050D653 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */; };
 		18D6049D1B76BABA0050D653 /* FriedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6049C1B76BABA0050D653 /* FriedListTableViewCell.swift */; };
 		18EAC36A1B700C9100D15954 /* TipInCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAC3691B700C9100D15954 /* TipInCellAnimator.swift */; };
@@ -47,7 +48,6 @@
 		6277189F1B0A58E800AF5C6E /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6277189D1B0A58E800AF5C6E /* ErrorHandling.swift */; };
 		627718A01B0A58E800AF5C6E /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6277189E1B0A58E800AF5C6E /* ParseLoginHelper.swift */; };
 		62A07CF71B1E03AA001F6916 /* FriendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A07CF61B1E03AA001F6916 /* FriendSearchTableViewCell.swift */; };
-		62A07CFE1B1E2465001F6916 /* ConvenienceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62551B8E1B06BFD7000913E4 /* ConvenienceKit.framework */; };
 		62A07CFF1B1E2465001F6916 /* ConvenienceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62551B8E1B06BFD7000913E4 /* ConvenienceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62A07D5B1B1F5CA1001F6916 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A07D5A1B1F5CA1001F6916 /* libstdc++.6.dylib */; };
 		62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C8C1E51B06BD6500DC3EA7 /* AppDelegate.swift */; };
@@ -162,7 +162,8 @@
 
 /* Begin PBXFileReference section */
 		0DF2A8FFD3B4EDDCACF53A70 /* libPods-Makestagram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Makestagram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		180667E01B7D440B00D103E8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		180667E01B7D440B00D103E8 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		18822D1A1B8303D8008D2D7E /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		18D6049C1B76BABA0050D653 /* FriedListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriedListTableViewCell.swift; sourceTree = "<group>"; };
 		18EAC3691B700C9100D15954 /* TipInCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInCellAnimator.swift; sourceTree = "<group>"; };
@@ -245,7 +246,6 @@
 				62551B711B06BF6D000913E4 /* ParseCrashReporting.framework in Frameworks */,
 				62551B6C1B06BF6D000913E4 /* Bolts.framework in Frameworks */,
 				62551B6D1B06BF6D000913E4 /* FBSDKCoreKit.framework in Frameworks */,
-				62A07CFE1B1E2465001F6916 /* ConvenienceKit.framework in Frameworks */,
 				62551B6E1B06BF6D000913E4 /* FBSDKLoginKit.framework in Frameworks */,
 				62551B701B06BF6D000913E4 /* Parse.framework in Frameworks */,
 				E1AE326112693E271A88E9E2 /* libPods-Makestagram.a in Frameworks */,
@@ -337,7 +337,8 @@
 				621BBB7A1B0E5D3A00E1F1DB /* PhotoViewController.swift */,
 				621BBB7C1B0E5D4500E1F1DB /* FriendSearchViewController.swift */,
 				18D6049A1B76BA9D0050D653 /* FriendListViewController.swift */,
-				180667E01B7D440B00D103E8 /* SettingsViewController.swift */,
+				180667E01B7D440B00D103E8 /* AboutViewController.swift */,
+				18822D1A1B8303D8008D2D7E /* LogoutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -534,6 +535,7 @@
 				TargetAttributes = {
 					62C8C1DF1B06BD6500DC3EA7 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = HCRN66V43F;
 					};
 					62C8C1F41B06BD6500DC3EA7 = {
 						CreatedOnToolsVersion = 6.3;
@@ -706,9 +708,10 @@
 				6277189F1B0A58E800AF5C6E /* ErrorHandling.swift in Sources */,
 				621BBB791B0E5D1F00E1F1DB /* TimelineViewController.swift in Sources */,
 				621BBB811B0E7FA000E1F1DB /* PhotoTakingHelper.swift in Sources */,
+				18822D1B1B8303D8008D2D7E /* LogoutViewController.swift in Sources */,
 				18EC5D3C1B829F6600C07362 /* ParseSignUpUI.swift in Sources */,
 				621BBB7B1B0E5D3A00E1F1DB /* PhotoViewController.swift in Sources */,
-				180667E11B7D440B00D103E8 /* SettingsViewController.swift in Sources */,
+				180667E11B7D440B00D103E8 /* AboutViewController.swift in Sources */,
 				62A07CF71B1E03AA001F6916 /* FriendSearchTableViewCell.swift in Sources */,
 				922B16C71B7AA4A000295B47 /* PhotoTakingViewController.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
@@ -857,6 +860,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -872,6 +877,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Makestagram/Makestagram-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -883,6 +889,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -898,6 +906,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Makestagram/Makestagram-Bridging-Header.h";
 			};
 			name = Release;

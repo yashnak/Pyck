@@ -184,8 +184,8 @@
                                                         <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEY-fS-h6v">
                                                             <rect key="frame" x="0.0" y="265" width="584" height="37"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0O-q7-c9z">
-                                                                    <rect key="frame" x="8" y="10" width="77" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0O-q7-c9z">
+                                                                    <rect key="frame" x="8" y="10" width="72" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="fbj-cr-lXk"/>
                                                                     </constraints>
@@ -307,7 +307,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="AGC-pk-9Gx" kind="show" id="uvx-L5-TUp"/>
+                                                    <segue destination="0KY-Om-NtD" kind="show" id="Wov-xb-Vry"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -326,7 +326,7 @@
                             <constraint firstItem="NIv-c1-Ywe" firstAttribute="top" secondItem="Gai-vw-BcO" secondAttribute="bottom" id="jIv-IJ-uAq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="Home" systemItem="recents" id="Qsw-7y-3cQ">
+                    <tabBarItem key="tabBarItem" title="" image="Home" id="Qsw-7y-3cQ">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -338,12 +338,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F23-aQ-QRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="-516"/>
+            <point key="canvasLocation" x="89" y="-451"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Logout View Controller-->
+        <scene sceneID="ht2-sS-g3h">
+            <objects>
+                <viewController id="0KY-Om-NtD" customClass="LogoutViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tf1-Tg-axu"/>
+                        <viewControllerLayoutGuide type="bottom" id="0xJ-G6-QlV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jVF-8r-dQe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="951"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7S-yU-sOR">
+                                <rect key="frame" x="23" y="130" width="79" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonPressed:" destination="0KY-Om-NtD" eventType="touchUpInside" id="wwo-ig-wev"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpe-Z1-Xqy">
+                                <rect key="frame" x="23" y="84" width="65" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AGC-pk-9Gx" kind="show" id="4EU-g8-YF6"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOG-wm-k8g">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                    <color key="textColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Settings" id="4cK-gZ-v3R">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="bqK-i4-fiq">
+                                            <color key="tintColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="0KY-Om-NtD" id="ga3-yM-Ycq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cOG-wm-k8g" firstAttribute="top" secondItem="tf1-Tg-axu" secondAttribute="bottom" id="TqS-9P-rxc"/>
+                            <constraint firstItem="cOG-wm-k8g" firstAttribute="leading" secondItem="jVF-8r-dQe" secondAttribute="leading" id="peZ-lt-lYr"/>
+                            <constraint firstAttribute="trailing" secondItem="cOG-wm-k8g" secondAttribute="trailing" id="x1s-4e-uPs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUL-ec-hHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="-1345"/>
+        </scene>
+        <!--About View Controller-->
         <scene sceneID="TUj-t3-ggx">
             <objects>
-                <viewController id="AGC-pk-9Gx" customClass="SettingsViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AGC-pk-9Gx" customClass="AboutViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hyx-fd-YGZ"/>
                         <viewControllerLayoutGuide type="bottom" id="q1Q-5d-Zca"/>
@@ -373,14 +438,21 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-2K-oG8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-2K-oG8">
                                 <rect key="frame" x="258" y="16" width="84" height="41"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
-                                <color key="textColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="About">
+                                        <attributes>
+                                            <color key="NSColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Icon credit given to Stano Bragin, Yorlmar Camops, Garrett Knoll, Hysen Drogu, Travis Yunis, and Nathan Thomson" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-7H-9sM">
-                                <rect key="frame" x="0.0" y="406" width="597" height="64"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Icon credit given to Stano Bragin, Yorlmar Camops, Garrett Knoll, Hysen Drogu, Travis Yunis, and Nathan Thomson" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-7H-9sM">
+                                <rect key="frame" x="16" y="372" width="568" height="98"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -390,6 +462,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="z96-pl-VhX" secondAttribute="centerX" id="0s7-JP-Mdo"/>
+                            <constraint firstItem="q1Q-5d-Zca" firstAttribute="top" secondItem="Aog-7H-9sM" secondAttribute="bottom" constant="481" id="5zd-15-gPt"/>
                             <constraint firstItem="NHU-2K-oG8" firstAttribute="top" secondItem="Hyx-fd-YGZ" secondAttribute="bottom" constant="16" id="7dX-ne-7BR"/>
                             <constraint firstItem="ENu-he-HPd" firstAttribute="top" secondItem="Hyx-fd-YGZ" secondAttribute="bottom" constant="16" id="NOA-w4-wWh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Aog-7H-9sM" secondAttribute="trailing" id="QD8-cD-1W2"/>
@@ -404,7 +477,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCT-4g-Xjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045" y="-1478"/>
+            <point key="canvasLocation" x="818" y="-1171"/>
         </scene>
         <!--Camera-->
         <scene sceneID="AUY-16-B35">

@@ -59,29 +59,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     } else {
       // Otherwise set the LoginViewController to be the first
       let loginViewController = PFLogInViewController()
-      loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten | .Facebook
+      loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten
+//        | .Facebook
       loginViewController.delegate = parseLoginHelper
       loginViewController.signUpController?.delegate = parseLoginHelper
       
       startViewController = loginViewController
         
         loginViewController.view.backgroundColor = UIColor.blackColor()
+        loginViewController.signUpController?.view.backgroundColor = UIColor.blackColor()
 ////        
 //        let logoView = UIImageView(image: UIImage(named:"pyckLogo.png"))
 //        loginViewController.logInView!.logo = logoView
 
         var logoInLogoTitle = UILabel()
         logoInLogoTitle.text = "Pyck"
-        logoInLogoTitle.textColor = UIColor.whiteColor()
+        logoInLogoTitle.textColor = UIColor(red:0.0/255.0, green:209.0/255.0, blue:159.0/255.0, alpha:1.0)
         logoInLogoTitle.font = UIFont(name: "Avenir", size: 50)
         loginViewController.logInView?.logo = logoInLogoTitle
         
-//        var signUpLogoTitle = UILabel()
-//        signUpLogoTitle.text = "Pyck"
-//        signUpLogoTitle.textColor = UIColor.whiteColor()
-//        signUpLogoTitle.font = UIFont(name: "Avenir", size: 50)
-//        signUpViewController.signUpView?.logo = signUpLogoTitle
-//        
+        var signUpLogoTitle = UILabel()
+        signUpLogoTitle.text = "Pyck"
+        signUpLogoTitle.textColor = UIColor(red:0.0/255.0, green:209.0/255.0, blue:159.0/255.0, alpha:1.0)
+        signUpLogoTitle.font = UIFont(name: "Avenir", size: 50)
+        loginViewController.signUpController?.signUpView?.logo = signUpLogoTitle
+        
         
     }
     
@@ -90,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.makeKeyAndVisible()
     
     // make white the default color for selected tab bar entries
-    UITabBar.appearance().tintColor = UIColor.whiteColor()
+    UITabBar.appearance().tintColor = UIColor(red:0.0/255.0, green:209.0/255.0, blue:159.0/255.0, alpha:1.0)
     
     return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
   }

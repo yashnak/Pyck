@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>Make-School.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>com.yashna.Makestagram</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -25,16 +25,16 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1577537559179154</string>
+				<string>fb1511911572434302</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>1577537559179154</string>
+	<string>1511911572434302</string>
 	<key>FacebookDisplayName</key>
-	<string>MakeSchoolTesting</string>
+	<string>Pyck</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
