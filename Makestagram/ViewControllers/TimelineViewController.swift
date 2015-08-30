@@ -92,6 +92,9 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     }
     alertController.addAction(destroyAction)
     
+    alertController.popoverPresentationController?.sourceView = self.view
+    alertController.popoverPresentationController?.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0)
+    //
     self.presentViewController(alertController, animated: true, completion: nil)
   }
   

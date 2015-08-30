@@ -76,7 +76,10 @@ class FriendSearchViewController: UIViewController {
     super.viewWillAppear(animated)
     
     tableView.backgroundColor = UIColor.blackColor()
-    
+    //view.backgroundColor = UIColor.blackColor()
+    self.tableView.backgroundView = UIView.new()
+    self.tableView.backgroundView?.backgroundColor = UIColor.blackColor()
+
     
     state = .DefaultMode
     
@@ -123,6 +126,9 @@ extension FriendSearchViewController: UITableViewDataSource {
     }
     
     cell.delegate = self
+    
+    cell.backgroundColor = cell.contentView.backgroundColor;
+    
     
     return cell
   }

@@ -120,6 +120,7 @@ class PhotoTakingViewController: UIViewController,UIImagePickerControllerDelegat
         myImageView.backgroundColor = UIColor.blackColor()
         //captionTextField.returnKeyType = .Done
         self.captionTextField.delegate = self
+        view.backgroundColor = UIColor.blackColor()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);

@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Friend Search View Controller-->
+        <!--Add Friends-->
         <scene sceneID="duf-Fg-pMk">
             <objects>
                 <viewController id="CIu-mW-9E4" customClass="FriendSearchViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="P72-U2-MCI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M9P-eS-FIC" userLabel="All View">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-uu-FRQ">
-                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-uu-FRQ">
+                                <rect key="frame" x="0.0" y="-5" width="600" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" translucent="NO" id="VfS-cw-RNX">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -75,35 +75,16 @@
                                     <outlet property="dataSource" destination="CIu-mW-9E4" id="gLK-d1-LJr"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-I3-ZFg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="665-Uk-W4t"/>
-                                </constraints>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                    <color key="textColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Add Friends" id="CS9-oH-Yjm"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.15490318351772592" blue="0.11570396245604908" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.098039215686274508" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="P72-U2-MCI" firstAttribute="top" secondItem="WM7-uu-FRQ" secondAttribute="bottom" id="1uu-Te-vfa"/>
-                            <constraint firstItem="6bG-I3-ZFg" firstAttribute="leading" secondItem="M9P-eS-FIC" secondAttribute="leading" id="6Mz-yC-XFx"/>
-                            <constraint firstItem="WM7-uu-FRQ" firstAttribute="top" secondItem="6bG-I3-ZFg" secondAttribute="bottom" id="OUh-Ia-TDc"/>
-                            <constraint firstAttribute="trailing" secondItem="6bG-I3-ZFg" secondAttribute="trailing" id="Oti-Zt-2Bk"/>
-                            <constraint firstItem="6bG-I3-ZFg" firstAttribute="top" secondItem="M9P-eS-FIC" secondAttribute="topMargin" id="fNT-Ss-gf7"/>
+                            <constraint firstItem="WM7-uu-FRQ" firstAttribute="top" secondItem="M9P-eS-FIC" secondAttribute="topMargin" id="HGC-kB-B8S"/>
                             <constraint firstItem="WM7-uu-FRQ" firstAttribute="leading" secondItem="M9P-eS-FIC" secondAttribute="leading" id="g6b-Ls-I1x"/>
                             <constraint firstAttribute="trailing" secondItem="WM7-uu-FRQ" secondAttribute="trailing" id="gTm-qw-4py"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="People" id="fNW-So-eBQ">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Add Friends" id="2Sa-x2-r9x"/>
                     <connections>
                         <outlet property="searchBar" destination="VfS-cw-RNX" id="qUb-Hg-JXN"/>
                         <outlet property="tableView" destination="WM7-uu-FRQ" id="UAB-EL-8Eb"/>
@@ -111,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md6-eQ-ZGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933" y="343"/>
+            <point key="canvasLocation" x="1752" y="298"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="D78-it-JNo">
@@ -244,7 +225,7 @@
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="sEY-fS-h6v" secondAttribute="trailing" id="ERw-6V-xDv"/>
                                                         <constraint firstItem="sEY-fS-h6v" firstAttribute="leading" secondItem="SZm-o4-ABY" secondAttribute="leading" id="Eba-A6-ekc"/>
@@ -393,7 +374,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cOG-wm-k8g" firstAttribute="top" secondItem="tf1-Tg-axu" secondAttribute="bottom" id="TqS-9P-rxc"/>
                             <constraint firstItem="cOG-wm-k8g" firstAttribute="leading" secondItem="jVF-8r-dQe" secondAttribute="leading" id="peZ-lt-lYr"/>
@@ -792,12 +773,38 @@
                     <connections>
                         <segue destination="ZOG-s5-zI9" kind="relationship" relationship="viewControllers" id="eLh-IO-ggp"/>
                         <segue destination="FCm-8m-WnB" kind="relationship" relationship="viewControllers" id="Ip3-5p-c0b"/>
-                        <segue destination="CIu-mW-9E4" kind="relationship" relationship="viewControllers" id="zWC-SV-4h6"/>
+                        <segue destination="wOc-nd-fUE" kind="relationship" relationship="viewControllers" id="zWC-SV-4h6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ya4-tU-uKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-306" y="172"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s20-mR-eAb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wOc-nd-fUE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="People" id="fNW-So-eBQ">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="1oA-V1-Rbu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                            <color key="textColor" red="0.13725490200000001" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CIu-mW-9E4" kind="relationship" relationship="rootViewController" id="eRm-rk-fPC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Blx-9g-K3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="298"/>
         </scene>
     </scenes>
     <resources>

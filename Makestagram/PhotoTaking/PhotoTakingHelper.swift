@@ -57,7 +57,19 @@ class PhotoTakingHelper : NSObject {
         
         alertController.addAction(photoLibraryAction)
         
+        
+       // viewController.presentViewController(alertController, animated: true, completion: nil)
+//        if let popoverController = alertController.popoverPresentationController {
+//            popoverController.barButtonItem = sender
+//        }
+//self.presentViewController(alertController, animated: true, completion: nil)
+        alertController.popoverPresentationController?.sourceView = viewController.view
+        alertController.popoverPresentationController?.sourceRect = CGRectMake(viewController.view.bounds.size.width/2.0, viewController.view.bounds.size.height / 1.05, 1.0, 1.0)
+        //
         viewController.presentViewController(alertController, animated: true, completion: nil)
+
+        
+        
     }
     
     func showImagePickerController(sourceType: UIImagePickerControllerSourceType) {
