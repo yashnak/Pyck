@@ -333,17 +333,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="951"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7S-yU-sOR">
-                                <rect key="frame" x="23" y="130" width="79" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Log Out">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutButtonPressed:" destination="0KY-Om-NtD" eventType="touchUpInside" id="wwo-ig-wev"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpe-Z1-Xqy">
                                 <rect key="frame" x="23" y="84" width="65" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -409,14 +398,14 @@
                                     <action selector="cancelButtonPressed:" destination="AGC-pk-9Gx" eventType="touchUpInside" id="L4E-l3-cVH"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Pyck is an interactive photo sharing app which allows individuals to briefly take part in another's experience. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z96-pl-VhX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Pyck is an interactive photo sharing app which allows individuals to briefly take part in another's experience. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z96-pl-VhX">
                                 <rect key="frame" x="0.0" y="139" width="600" height="223"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="223" id="m86-5S-K5j"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-2K-oG8">
@@ -432,25 +421,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Icon credit given to Stano Bragin, Yorlmar Camops, Garrett Knoll, Hysen Drogu, Travis Yunis, and Nathan Thomson" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-7H-9sM">
-                                <rect key="frame" x="16" y="372" width="568" height="98"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="z96-pl-VhX" secondAttribute="centerX" id="0s7-JP-Mdo"/>
-                            <constraint firstItem="q1Q-5d-Zca" firstAttribute="top" secondItem="Aog-7H-9sM" secondAttribute="bottom" constant="481" id="5zd-15-gPt"/>
                             <constraint firstItem="NHU-2K-oG8" firstAttribute="top" secondItem="Hyx-fd-YGZ" secondAttribute="bottom" constant="16" id="7dX-ne-7BR"/>
                             <constraint firstItem="ENu-he-HPd" firstAttribute="top" secondItem="Hyx-fd-YGZ" secondAttribute="bottom" constant="16" id="NOA-w4-wWh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Aog-7H-9sM" secondAttribute="trailing" id="QD8-cD-1W2"/>
                             <constraint firstAttribute="centerX" secondItem="NHU-2K-oG8" secondAttribute="centerX" id="Sp0-nw-FCm"/>
                             <constraint firstItem="ENu-he-HPd" firstAttribute="leading" secondItem="38d-bU-diM" secondAttribute="leadingMargin" id="b51-zb-oS9"/>
-                            <constraint firstItem="Aog-7H-9sM" firstAttribute="leading" secondItem="38d-bU-diM" secondAttribute="leadingMargin" id="gZD-Jv-zi0"/>
-                            <constraint firstItem="Aog-7H-9sM" firstAttribute="top" secondItem="z96-pl-VhX" secondAttribute="bottom" constant="10" id="ifd-o3-Rij"/>
                             <constraint firstItem="z96-pl-VhX" firstAttribute="top" secondItem="NHU-2K-oG8" secondAttribute="bottom" constant="82" id="n52-qQ-7Po"/>
                             <constraint firstItem="z96-pl-VhX" firstAttribute="leading" secondItem="38d-bU-diM" secondAttribute="leading" id="oeT-qq-SRu"/>
                         </constraints>

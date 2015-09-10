@@ -76,7 +76,6 @@ extension ParseLoginHelper : PFSignUpViewControllerDelegate {
   func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
     self.callback(user, nil)
     
-//    signUpController.view.backgroundColor = UIColor.blackColor()
 
 //    var signUpLogoTitle = UILabel()
 //    signUpLogoTitle.text = "Pyck"

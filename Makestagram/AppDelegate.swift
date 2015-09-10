@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Set up the Parse SDK
     Parse.setApplicationId("Tj8yMjNZyjA9CgCTMNdk2h3f16NDYGGEk9h4S6jx", clientKey: "Pjv6Z5gfP9z0GD2DOuObKXXU1IwAd66rp8N0bcWy")
+    //PFUser.enableRevocableSessionInBackground]
     
     // Set default ACL
     let acl = PFACL()

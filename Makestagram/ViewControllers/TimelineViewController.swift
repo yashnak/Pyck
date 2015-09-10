@@ -94,9 +94,10 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     
     alertController.popoverPresentationController?.sourceView = self.view
     alertController.popoverPresentationController?.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0)
-    //
+    
     self.presentViewController(alertController, animated: true, completion: nil)
-  }
+    
+     }
   
   func showFlagActionSheetForPost(post: Post) {
     let alertController = UIAlertController(title: nil, message: "Do you want to flag this post?", preferredStyle: .ActionSheet)
@@ -109,7 +110,13 @@ class TimelineViewController: UIViewController, TimelineComponentTarget {
     }
     
     alertController.addAction(destroyAction)
+    alertController.view.tintColor = UIColor.blackColor()
+
     
+    //self.presentViewController(alertController, animated: true, completion: nil)
+    alertController.popoverPresentationController?.sourceView = self.view
+    alertController.popoverPresentationController?.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0)
+    //
     self.presentViewController(alertController, animated: true, completion: nil)
   }
 

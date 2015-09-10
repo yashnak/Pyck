@@ -10,27 +10,29 @@ import UIKit
 import Parse
 import ParseUI
 
+
 class LogoutViewController: UIViewController {
+    var parseLoginHelper: ParseLoginHelper!
+    var appDelegate: AppDelegate!
 
     
     @IBAction func cancelButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
-    @IBAction func logOutButtonPressed(sender: AnyObject) {
-        PFUser.logOut()
-        var currentUser = PFUser.currentUser()
-
-        
-        //self.loginSetup()
-    }
+//    @IBAction func logOutButtonPressed(sender: AnyObject) {
+//        PFUser.logOut()
+//        var currentUser = PFUser.currentUser()
+//        //self.performSegueWithIdentifier(l, sender: self)
+//////
+//    }
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     

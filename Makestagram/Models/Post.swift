@@ -59,7 +59,7 @@ class Post : PFObject, PFSubclassing {
     
     saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
       if let error = error {
-        ErrorHandling.defaultErrorHandler(error)
+        //ErrorHandling.defaultErrorHandler(error)
       }
       
       UIApplication.sharedApplication().endBackgroundTask(self.photoUploadTask!)
@@ -74,7 +74,7 @@ class Post : PFObject, PFSubclassing {
       
       imageFile?.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
         if let error = error {
-          ErrorHandling.defaultErrorHandler(error)
+          //ErrorHandling.defaultErrorHandler(error)
         }
         
         if let data = data {
@@ -93,7 +93,7 @@ class Post : PFObject, PFSubclassing {
     
     ParseHelper.likesForPost(self, completionBlock: { (var likes: [AnyObject]?, error: NSError?) -> Void in
       if let error = error {
-        ErrorHandling.defaultErrorHandler(error)
+        //ErrorHandling.defaultErrorHandler(error)
       }
       // filter likes that are from users that no longer exist
       likes = likes?.filter { like in like[ParseHelper.ParseLikeFromUser] != nil }
